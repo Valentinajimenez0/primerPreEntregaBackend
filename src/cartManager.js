@@ -33,7 +33,7 @@ export class CartManager  {
             try {
             this.carts = await this.getCarts()
 
-            const newId = this.carts.length > 0 ? Math.max(...this.carts.map(p => p.id)) + 1 : 1;//////
+            const newId = this.carts.length > 0 ? Math.max(...this.carts.map(p => p.id)) + 1 : 1;
 
             const newCart = {id: newId, products:[]}
 
@@ -58,9 +58,9 @@ export class CartManager  {
                 const existingProductIndex = cartProducts.findIndex(product => product.product_id === product_id);
         
                 if (existingProductIndex !== -1) {
-                    cartProducts[existingProductIndex].quantity += 1; // incrementar cantidad
+                    cartProducts[existingProductIndex].quantity += 1; 
                 } else {
-                    cartProducts.push({ product_id: product_id, quantity: 1 }); // nuevo producto en el carrito
+                    cartProducts.push({ product_id: product_id, quantity: 1 }); 
                 }
         
                 carts[index].products = cartProducts;
@@ -73,28 +73,4 @@ export class CartManager  {
         }
         
         
-        //////////HECHO 
-        //  async addProductToCart (cart_id, product_id){
-        //      const carts = await this.getCarts()
-        //      const index = carts.findIndex(cart => cart.id === cart_id)
-
-        //     if (index !== -1){
-        //         const cartProducts = await this.getCartProduct(cart_id)
-        //         const existingProduct = cartProducts.findIndex(product => product.product_id === product_id)
-
-        //         if (existingProduct !== -1){
-        //             cartProducts[existingProduct].quantity = cartProducts[existingProduct].quantity + 1
-
-        //         }else{
-        //             cartProducts.push({product_id, quantity:1})
-        //         }
-
-        //         carts[index].products = cartProducts
-
-        //         await fs.writeFile(this.path, JSON.stringify(carts))
-        //         console.log("producto agregado con exito")
-        //     }else {
-        //         console.log("no se encontro el carrito")
-        //     }
-        // }
 }
