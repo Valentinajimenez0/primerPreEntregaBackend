@@ -1,9 +1,8 @@
  # RUTA PRODUCTS
    ## METODO POST
 - se agrega un producto con el metodo post, y se guarda en nuestros products.json
-![alt text](<Captura de pantalla 2024-04-23 001523.png>)
- ![alt text](image-8.png)
 
+![2](https://github.com/Valentinajimenez0/primerPreEntregaBackend/assets/134071168/0836dd23-0af7-4808-baf7-08c64fd4e10f)
 
 
 - se agrega otro producto y si quiero repetir la peticion, de agregar el mismo producto, no te deja por tener el mismo code
